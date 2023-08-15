@@ -17,7 +17,7 @@ public class Atleta
 	// Atributos
 	// ************************************************************************
 
-	/**
+	/** t
 	 * El nombre del atleta. Se asume que los nombres de los atletas no están
 	 * repetidos, pero eso no es un problema para los atletas.
 	 */
