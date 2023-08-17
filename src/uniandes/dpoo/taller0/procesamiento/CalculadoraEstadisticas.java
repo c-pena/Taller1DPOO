@@ -443,5 +443,13 @@ public class CalculadoraEstadisticas
 
 		return nombres;
 	}
+	
+	public String consultarPais(String nombreAtleta)
+	{
+		Atleta atleta = buscarAtleta(nombreAtleta);
+		Pais pais = atleta.darPais();
+		String nombre = pais.darNombre();
+		return nombre;
+	}
 
 }

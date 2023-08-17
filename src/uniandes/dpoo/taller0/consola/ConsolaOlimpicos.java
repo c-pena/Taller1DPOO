@@ -62,6 +62,8 @@ public class ConsolaOlimpicos
 					ejecutarMedallistasPorNacionYGenero();
 				else if (opcion_seleccionada == 12 && calculadora != null)
 					ejecutarPorcentajeMedallistas();
+				else if (opcion_seleccionada == 14 && calculadora != null)
+					ejecutarConsultarPais();
 				else if (opcion_seleccionada == 13)
 				{
 					System.out.println("Saliendo de la aplicación ...");
@@ -103,6 +105,7 @@ public class ConsolaOlimpicos
 		System.out.println("11. Consultar los medallistas por país y género");
 		System.out.println("12. Consultar el porcentaje de atletas que son medallistas");
 		System.out.println("13. Salir de la aplicación\n");
+		System.out.println("14. Consultar nacionalidad de un atleta");
 	}
 
 	/**
@@ -346,7 +349,23 @@ public class ConsolaOlimpicos
 			System.out.println("El número ingresado no es válido. Por favor escriba un número entero.");
 		}
 	}
-
+	
+	private void ejecutarConsultarPais()
+	{
+		// Test file path C:\Users\caran\git\Taller1DPOO\data\atletas.csv
+		System.out.println("\n" + "Ingrese el nombre del atleta" + "\n");
+		try
+		{
+			String nombre = input("Ingrese el nombre del atleta que le interesa");
+			String pais = calculadora.consultarPais(nombre);
+			System.out.println("El atleta pertenece a el pais: " + pais);
+		}
+		catch (NumberFormatException nfe)
+		{
+			System.out.println("El nombre ingresado no es válido. Por favor escriba un nombre diferente.");
+		}
+	}
+	
 	/**
 	 * Ejecuta la opción para consultar los atletas de un año.
 	 */
